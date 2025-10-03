@@ -3,10 +3,11 @@
 <html>
 <head>
     <title>Iris Flower Classifier</title>
+    <meta charset="UTF-8">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            background: linear-gradient(to right, #1e3c72, #2a5298);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -14,29 +15,29 @@
             margin: 0;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
             text-align: center;
-            width: 350px;
+            width: 400px;
         }
         h1 {
-            color: #4b0082;
-            margin-bottom: 30px;
+            color: #003366;
+            margin-bottom: 25px;
         }
         input {
             margin: 10px 0;
-            padding: 10px;
-            width: 80%;
+            padding: 12px;
+            width: 85%;
             border-radius: 8px;
             border: 1px solid #ccc;
             font-size: 16px;
         }
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             margin-top: 15px;
-            background-color: #4b0082;
+            background-color: #003366;
             color: white;
             border: none;
             border-radius: 8px;
@@ -44,15 +45,15 @@
             cursor: pointer;
         }
         button:hover {
-            background-color: #6a0dad;
+            background-color: #0059b3;
         }
         h2 {
             margin-top: 20px;
-            color: #ff1493;
+            color: #0059b3;
         }
         p.accuracy {
-            margin-top: 10px;
-            color: #008080;
+            margin-top: 15px;
+            color: #0073e6;
             font-weight: bold;
         }
     </style>
@@ -73,9 +74,8 @@
         {% endif %}
 
         {% if accuracy %}
-        <p class="accuracy">Model Accuracy: {{ accuracy*100 | round(2) }}%</p>
+        <p class="accuracy">Model Accuracy: {{ accuracy|round(2) }}%</p>
         {% endif %}
     </div>
 </body>
 </html>
-
